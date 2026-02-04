@@ -33,7 +33,7 @@ GPU1:
 
 Steps to reproduce:
 - Have the problematic environment
-- Use Vulkan Configuration to turn on a layer (for example, Validation) for "Any Running Vulkan Executable"
+- Use Vulkan Configuration application to configure "Vulkan Layers Configuration Scope" turn on a layer (for example, Validation) for "Any Running Vulkan Executable"
 - Run ```gradlew run```
 
 Resulting hs_err:
