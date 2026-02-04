@@ -19,16 +19,8 @@ dependencies {
     implementation(platform("org.lwjgl:lwjgl-bom:$lwjglVersion"))
 
     implementation("org.lwjgl", "lwjgl")
-    implementation("org.lwjgl", "lwjgl-assimp")
-    implementation("org.lwjgl", "lwjgl-glfw")
-    implementation("org.lwjgl", "lwjgl-openal")
-    implementation("org.lwjgl", "lwjgl-stb")
     implementation("org.lwjgl", "lwjgl-vulkan")
     implementation ("org.lwjgl", "lwjgl", classifier = lwjglNatives)
-    implementation ("org.lwjgl", "lwjgl-assimp", classifier = lwjglNatives)
-    implementation ("org.lwjgl", "lwjgl-glfw", classifier = lwjglNatives)
-    implementation ("org.lwjgl", "lwjgl-openal", classifier = lwjglNatives)
-    implementation ("org.lwjgl", "lwjgl-stb", classifier = lwjglNatives)
 }
 
 kotlin {
