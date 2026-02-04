@@ -1,5 +1,5 @@
 Environment:
-Currently has been created on a laptop with an integrated and discrete gpu on Windows 11.
+The issue has been observed on a laptop with an integrated and discrete gpu on Windows 11.
 ```
 Devices:
 ========
@@ -29,12 +29,11 @@ GPU1:
         conformanceVersion = 1.4.0.0
         deviceUUID         = 00000000-3500-0000-0000-000000000000
         driverUUID         = 414d442d-5749-4e2d-4452-560000000000
-[Vulkan Loader] DEBUG | LAYER:  Unloading layer library C:\VulkanSDK\1.4.341.0\Bin\VkLayer_khronos_validation.dll
 ```
 
-Steps to repoduce:
-- Have the problematic environment ^^
-- Use Vulkan Configuration to turn on a layer (for example Validation) for "Any Running Vulkan Executable"
+Steps to reproduce:
+- Have the problematic environment
+- Use Vulkan Configuration to turn on a layer (for example, Validation) for "Any Running Vulkan Executable"
 - Run ```gradlew run```
 
 Resulting hs_err:
@@ -44,7 +43,7 @@ Current thread (0x000002938807c6d0):  JavaThread "main"             [_thread_in_
 Stack: [0x000000f300700000,0x000000f300800000],  sp=0x000000f3007fbe40,  free space=1007k
 Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
 C  [msvcp140.dll+0x132a8]
-C  [VkLayer_api_dump.dll+0x5ad424]
+C  [VkLayer_khronos_validation.dll+0x810a0c]
 
 Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
 j  org.lwjgl.system.JNI.callPPPI(JJJJ)I+0
