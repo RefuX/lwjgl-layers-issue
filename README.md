@@ -1,5 +1,5 @@
 Environment:
-Currently has been created on a laptop with an integrated and discrete gpu.
+Currently has been created on a laptop with an integrated and discrete gpu on Windows 11.
 ```
 Devices:
 ========
