@@ -32,8 +32,10 @@ GPU1:
 [Vulkan Loader] DEBUG | LAYER:  Unloading layer library C:\VulkanSDK\1.4.341.0\Bin\VkLayer_khronos_validation.dll
 ```
 
-Command:
-```gradlew run```
+Steps to repoduce:
+- Have the problematic environment ^^
+- Use Vulkan Configuration to turn on a layer (for example Validation) for "Any Running Vulkan Executable"
+- Run ```gradlew run```
 
 Resulting hs_err:
 ```
