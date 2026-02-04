@@ -34,3 +34,8 @@ application {
 tasks.test {
     useJUnitPlatform()
 }
+
+task("runDump", JavaExec::class) {
+    mainClass = "org.test.MainWithDumpKt"
+    classpath = sourceSets["main"].runtimeClasspath
+}

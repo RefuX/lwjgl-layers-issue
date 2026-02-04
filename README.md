@@ -36,6 +36,10 @@ Steps to reproduce:
 - Use Vulkan Configuration application to configure "Vulkan Layers Configuration Scope" turn on a layer (for example, Validation) for "Any Running Vulkan Executable"
 - Run ```gradlew run```
 
+Or, alternatively:
+- Have the problematic environment
+- Run ```gradlew runDump```
+
 Resulting hs_err:
 ```
 Current thread (0x000002938807c6d0):  JavaThread "main"             [_thread_in_native, id=35020, stack(0x000000f300700000,0x000000f300800000) (1024K)]
