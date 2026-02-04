@@ -1,5 +1,5 @@
 Environment:
-The issue has been observed on a laptop with an integrated and discrete gpus on Windows 11.
+The issue has been observed on a laptop with integrated and discrete gpus on Windows 11.
 ```
 Devices:
 ========
