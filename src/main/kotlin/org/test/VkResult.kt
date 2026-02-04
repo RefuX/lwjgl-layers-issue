@@ -1,4 +1,4 @@
-package kotu.vulkan.vk
+package org.test
 
 enum class VkResult(
     val value: Int,
@@ -64,7 +64,7 @@ enum class VkResult(
     ;
 
     companion object {
-        private val map = VkResult.entries.associateBy(VkResult::value)
+        private val map = entries.associateBy(VkResult::value)
 
         fun fromInt(type: Int) = map[type] ?: throw IllegalArgumentException("Invalid VkResult value: $type")
     }
