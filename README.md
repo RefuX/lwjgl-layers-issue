@@ -1,46 +1,18 @@
-Environment:
-The issue has been observed on a laptop with integrated and discrete gpus on Windows 11.
-```
-Devices:
-========
-GPU0:
-        apiVersion         = 1.4.325
-        driverVersion      = 591.86.0.0
-        vendorID           = 0x10de
-        deviceID           = 0x28e1
-        deviceType         = PHYSICAL_DEVICE_TYPE_DISCRETE_GPU
-        deviceName         = NVIDIA GeForce RTX 4050 Laptop GPU
-        driverID           = DRIVER_ID_NVIDIA_PROPRIETARY
-        driverName         = NVIDIA
-        driverInfo         = 591.86
-        conformanceVersion = 1.4.3.0
-        deviceUUID         = 1a67171d-33ed-21c8-fab3-ae508de6ed20
-        driverUUID         = ab24b0bb-7bd9-59fc-a310-4c2bdaba9b72
-GPU1:
-        apiVersion         = 1.4.315
-        driverVersion      = 2.0.353
-        vendorID           = 0x1002
-        deviceID           = 0x1681
-        deviceType         = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU
-        deviceName         = AMD Radeon(TM) Graphics
-        driverID           = DRIVER_ID_AMD_PROPRIETARY
-        driverName         = AMD proprietary driver
-        driverInfo         = 26.1.1 (AMD proprietary shader compiler)
-        conformanceVersion = 1.4.0.0
-        deviceUUID         = 00000000-3500-0000-0000-000000000000
-        driverUUID         = 414d442d-5749-4e2d-4452-560000000000
-```
-
-Steps to reproduce:
-- Have the problematic environment
+## Fix
+- Update to the latest version of the JVM you're using.
+- Cause:
+  - [It's a bug related to ⁨msvcp140.dll⁩ and ABI changes related to mutexes](https://stackoverflow.com/questions/78598141/first-stdmutexlock-crashes-in-application-built-with-latest-visual-studio)
+  
+## Steps to reproduce
+- Have the problematic environment (JVM with problematic versions of msvcp140.dll)
 - Use Vulkan Configuration application to configure "Vulkan Layers Configuration Scope" turn on a layer (for example, Validation) for "Any Running Vulkan Executable"
 - Run ```gradlew run```
 
 Or, alternatively:
-- Have the problematic environment
+- Have the problematic environment (JVM with problematic versions of msvcp140.dll)
 - Run ```gradlew runDump```
 
-Resulting hs_err:
+### Resulting hs_err
 ```
 Current thread (0x000002938807c6d0):  JavaThread "main"             [_thread_in_native, id=35020, stack(0x000000f300700000,0x000000f300800000) (1024K)]
 
